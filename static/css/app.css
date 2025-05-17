@@ -1,0 +1,22 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+
+}
+
+body{
+    background-color: beige;
+}
+.navbar
+     {
+        /* fallback for old browsers */
+        background: rgba(0, 255, 72, 0.9);
+      
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(to left, black rgb(222, 46, 152));
+      
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to left, black, rgb(222, 46, 152));
+      }
+
