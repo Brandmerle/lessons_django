@@ -1,7 +1,7 @@
 .hero-background-secondary {
     position: relative;
     height: 50vh; /* Slightly shorter hero for internal page */
-    background: url('https://placehold.co/1920x800/20B2AA/B0E0E6?text=About+Us+Efoil+Header') no-repeat center center/cover; /* Different hero image */
+    background: url('../img/efoil_5.webp') no-repeat center center/cover; /* Different hero image */
     display: flex;
     align-items: center;
     justify-content: center;
