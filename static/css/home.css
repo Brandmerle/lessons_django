@@ -1,0 +1,343 @@
+Let's give your main content a vibrant, tropical feel! The key to a tropical theme is often bright, inviting colors, soft shadows, and imagery that evokes sun, sand, and clear water.
+
+
+
+/* --- General Tropical Styling --- */
+body {
+    font-family: 'Open Sans', sans-serif; /* A clean, modern font that feels light */
+    color: #333; /* Default text color, good contrast */
+}
+
+/* --- Hero Section Styling --- */
+.hero-background {
+    position: relative;
+    height: 70vh; /* Adjust height as needed */
+    background:  url('../img/foil1.jpeg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden; /* Important for overlay */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* A subtle gradient overlay to ensure text readability */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+    z-index: 1; /* Place overlay above background image */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Place content above overlay */
+    padding: 20px;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-family: 'Pacifico', cursive; /* A script font for a playful, tropical feel */
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Text shadow for readability */
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* --- General Section Styling (About, Lessons, Testimonials, Contact) --- */
+section {
+    padding: 80px 0;
+    background-color: #f8fcfd; /* Light, airy background for sections */
+}
+
+section:nth-of-type(even) {
+    background-color: #e6f6f9; /* Slightly different background for alternating sections */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif; /* A modern, clean heading font */
+    font-size: 2.5rem;
+    color: #007bff; /* A vibrant blue, common in tropical themes */
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #20B2AA; /* A soothing teal color */
+    border-radius: 2px;
+}
+
+/* --- Tropical Button Styling --- */
+.tropical-button,
+.lesson-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(to right, #00C9FF, #92FE9D); /* Vibrant blue-green gradient */
+    color: white;
+    text-decoration: none;
+    border-radius: 50px; /* Pill-shaped button */
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 190, 255, 0.4); /* Soft shadow */
+}
+
+.tropical-button:hover,
+.lesson-button:hover {
+    background: linear-gradient(to right, #92FE9D, #00C9FF); /* Reverse gradient on hover */
+    box-shadow: 0 8px 20px rgba(0, 190, 255, 0.6);
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+/* --- About Section Specifics --- */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image-wrapper {
+    flex: 1 1 45%; /* Allows image to grow/shrink */
+    max-width: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.about-text-content {
+    flex: 1 1 45%;
+    max-width: 600px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* --- Lessons Section Specifics --- */
+.lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.lesson-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lesson-card:hover {
+    transform: translateY(-10px); /* Lift card on hover */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.lesson-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.lesson-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.lesson-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #444;
+}
+
+.lesson-card ul li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.lesson-card ul li::before {
+    content: '🌴'; /* Tropical icon bullet point */
+    position: absolute;
+    left: 0;
+    color: #20B2AA;
+}
+
+.lesson-card .price {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+    color: #FF7F50; /* Coral/orange for price */
+    font-weight: bold;
+    margin-top: auto; /* Pushes price to bottom */
+    margin-bottom: 25px;
+    display: block; /* Ensures it takes full width */
+}
+
+/* Ensure button is at the bottom of the card */
+.lesson-card .lesson-button {
+    margin-top: auto;
+}
+
+/* --- Testimonials Section Specifics --- */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #20B2AA; /* Accent border */
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.testimonial-card .author {
+    font-weight: bold;
+    color: #007bff;
+    text-align: right;
+}
+
+/* --- Contact Section Specifics --- */
+.contact-info {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.contact-info p.phone span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image-wrapper,
+    .about-text-content {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .lessons-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .tropical-button,
+    .lesson-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}

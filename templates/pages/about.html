@@ -1,10 +1,124 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %}About me{% endblock %}
+{% block title %} About ADV eFoils {% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
 
 {% block content %}
+<main>
+    <section id="about-hero" class="hero-background-secondary">
+        <div class="hero-overlay"></div>
+        <div class="hero-content text-center">
+            <h1>My Journey: Flying into the Future</h1>
+            <p>Discover the passion and vision behind ADV eFoils.</p>
+        </div>
+    </section>
 
-<h1>About me</h1>
-<h2>my name is Brandon</h2>
+    <section id="our-story">
+        <div class="container">
+            <h2>My Story: Where the Glide Began</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-2">
+                    <div class="image-wrapper">
+                        <img src="{% static 'img/founder-efoil.jpg' %}" alt="Founder on efoil at sunset" class="img-fluid rounded-corners-shadow">
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <p>
+                        Hello, I'm Brandon, the passionate waterman behind ADV eFoils.
+                        Founded in 2025, this business emerged from my lifelong passion for the water and sharing the exhilarating experience of
+                        foiling with everyone, regardless of wave conditions. I envisioned a world
+                        where the freedom of flight over water wasn't limited by tides or wind, but powered
+                        by sustainable, cutting-edge technology.  ADV eFoils stands as a testament to my dedication and passion, offering premium
+                        eFoil experiences and lessons that redefine water adventure. I'm not just teaching eFoiling;
+                        I'm sharing a lifestyle of unparalleled freedom and connection with the ocean, one glide at a time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="my-mission" class="bg-light-tropical">
+        <div class="container">
+            <h2>My Mission: Sharing the Stoke of eFoil Flight</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="icon-text-block">
+                        <h3><i class="fas fa-leaf tropical-icon"></i> Eco-Conscious Adventure</h3>
+                        <p>
+                            I am committed to minimizing our environmental footprint. My eFoils operate silently
+                            and produce zero emissions, allowing you to experience the beauty of nature without
+                            disruption. I advocate for responsible tourism and ocean conservation.
+                        </p>
+                    </div>
+                    <div class="icon-text-block">
+                        <h3><i class="fas fa-users tropical-icon"></i> Community & Accessibility</h3>
+                        <p>
+                            My goal is to build a vibrant community of eFoil enthusiasts. I offer comprehensive
+                            lessons designed for all skill levels, ensuring that everyone can discover the joy
+                            of eFoiling in a safe and supportive environment.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="icon-text-block">
+                        
+                        <h3><i class="fas fa-lightbulb tropical-icon"></i> Innovation & Excellence</h3>
+                        <p>
+                            I'm always refining how I teach, using innovative methodsto ensure every lesson is clear, 
+                            fun, and gets you flying faster. I pair this with top-tier eFoils from WayDoo for a safe and
+                            exhilarating experience, ensuring you're learning on the best equipment the industry has to 
+                            offer right here on the Treasure Coast. My commitment is to deliver an unparalleled, 
+                            high-quality adventure every time.
+                        </p>
+                    </div>
+                    <div class="icon-text-block">
+                        <h3><i class="fas fa-hand-holding-heart tropical-icon"></i> Passion & Personalized Experience</h3>
+                        <p>
+                            At the core of ADV eFoils is my deep passion for water sports and adventure. I am a
+                            certified instructor and fellow enthusiast dedicated to sharing my love for eFoiling
+                            and ensuring every lesson is a personalized, unforgettable ride.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="meet-the-founder">
+        <div class="container">
+            <h2>Meet Your ADV eFoil Instructor</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6 mb-4"> {# Center the single card #}
+                    <div class="team-member-card"> {# Reusing the card style, renamed for clarity #}
+                        <img src="{% static 'img/your-photo.jpg' %}" alt="Your Photo" class="img-fluid rounded-circle team-photo">
+                        <h3>Brandon Merle</h3>
+                        <p class="role">Founder & Lead Instructor</p>
+                        <p class="bio">
+                            As the sole operator of ADV eFoils, I personally guide every student through their efoiling
+                            journey. With years of experience on the water and a deep understanding of efoil mechanics,
+                            I'm committed to providing a safe, fun, and truly personalized learning experience.
+                            My passion for the ocean and the thrill of gliding is something I love to share, ensuring
+                            you not only learn to ride but also fall in love with the sport.
+                        </p>
+                        <a href="{% url 'contact' %}" class="tropical-button mt-3">Connect with Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta-about" class="bg-gradient-tropical text-white text-center">
+        <div class="container">
+            <h2>Ready to Glide with Me?</h2>
+            <p class="lead">Let's discover the future of water sports together!</p>
+            <a href="{% url 'contact' %}" class="tropical-button inverted-button">
+                Book Your Adventure
+            </a>
+        </div>
+    </section>
+</main>
 {% endblock %}

@@ -1,0 +1,12 @@
+{% load static %}
+<footer class="footer mt-auto py-3">
+    <div class="container text-center">
+        <span class="text-white">&copy; {% now "Y" %} ADV eFoils. All rights reserved.</span>
+        <div class="footer-links mt-2">
+            <a href="{% url 'home' %}" class="text-white mx-2">Home</a>
+            <a href="{% url 'about' %}" class="text-white mx-2">About</a>
+            <a href="{% url 'note_list' %}" class="text-white mx-2">Lessons</a>
+            <a href="{% url 'contact' %}" class="text-white mx-2">Contact Us</a>
+        </div>
+    </div>
+</footer>
