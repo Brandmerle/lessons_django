@@ -10,3 +10,6 @@ def about_view(request):
 
 def contact_view(request):
     return render(request, 'pages/contact.html')
+
+def quickstart_view(request):
+    return render(request, 'pages/quickstart.html')

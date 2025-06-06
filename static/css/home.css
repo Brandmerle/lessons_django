@@ -1,24 +1,19 @@
-Let's give your main content a vibrant, tropical feel! The key to a tropical theme is often bright, inviting colors, soft shadows, and imagery that evokes sun, sand, and clear water.
-
-
-
-/* --- General Tropical Styling --- */
 body {
-    font-family: 'Open Sans', sans-serif; /* A clean, modern font that feels light */
-    color: #333; /* Default text color, good contrast */
+    font-family: 'Open Sans', sans-serif; 
+    color: #333; 
 }
 
 /* --- Hero Section Styling --- */
 .hero-background {
     position: relative;
-    height: 70vh; /* Adjust height as needed */
+    height: 70vh; 
     background:  url('../img/foil1.jpeg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #fff;
-    overflow: hidden; /* Important for overlay */
+    overflow: hidden; 
 }
 
 .hero-overlay {
@@ -27,23 +22,22 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* A subtle gradient overlay to ensure text readability */
     background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
-    z-index: 1; /* Place overlay above background image */
+    z-index: 1; 
 }
 
 .hero-content {
     position: relative;
-    z-index: 2; /* Place content above overlay */
+    z-index: 2; 
     padding: 20px;
     max-width: 800px;
 }
 
 .hero-content h1 {
-    font-family: 'Pacifico', cursive; /* A script font for a playful, tropical feel */
+    font-family: 'Pacifico', cursive; 
     font-size: 3.5rem;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Text shadow for readability */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
 }
 
 .hero-content p {
@@ -53,14 +47,14 @@ body {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* --- General Section Styling (About, Lessons, Testimonials, Contact) --- */
+
 section {
     padding: 80px 0;
-    background-color: #f8fcfd; /* Light, airy background for sections */
+    background-color: rgb(243, 234, 217); 
 }
 
 section:nth-of-type(even) {
-    background-color: #e6f6f9; /* Slightly different background for alternating sections */
+    background-color: rgb(243, 234, 217); 
 }
 
 .container {
@@ -70,9 +64,9 @@ section:nth-of-type(even) {
 }
 
 h2 {
-    font-family: 'Poppins', sans-serif; /* A modern, clean heading font */
+    font-family: 'Poppins', sans-serif; 
     font-size: 2.5rem;
-    color: #007bff; /* A vibrant blue, common in tropical themes */
+    color: #007bff; 
     text-align: center;
     margin-bottom: 60px;
     position: relative;
@@ -86,7 +80,7 @@ h2::after {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background-color: #20B2AA; /* A soothing teal color */
+    background-color: #20B2AA; 
     border-radius: 2px;
 }
 
@@ -95,24 +89,24 @@ h2::after {
 .lesson-button {
     display: inline-block;
     padding: 15px 30px;
-    background: linear-gradient(to right, #00C9FF, #92FE9D); /* Vibrant blue-green gradient */
+    background: linear-gradient(to right, #00C9FF, #92FE9D); 
     color: white;
     text-decoration: none;
-    border-radius: 50px; /* Pill-shaped button */
+    border-radius: 50px; 
     font-weight: bold;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 190, 255, 0.4); /* Soft shadow */
+    box-shadow: 0 5px 15px rgba(0, 190, 255, 0.4); 
 }
 
 .tropical-button:hover,
 .lesson-button:hover {
-    background: linear-gradient(to right, #92FE9D, #00C9FF); /* Reverse gradient on hover */
+    background: linear-gradient(to right, #92FE9D, #00C9FF); 
     box-shadow: 0 8px 20px rgba(0, 190, 255, 0.6);
-    transform: translateY(-3px); /* Subtle lift effect */
+    transform: translateY(-3px); 
 }
 
-/* --- About Section Specifics --- */
+/* --- About Section --- */
 .about-content {
     display: flex;
     flex-wrap: wrap;
@@ -122,11 +116,11 @@ h2::after {
 }
 
 .about-image-wrapper {
-    flex: 1 1 45%; /* Allows image to grow/shrink */
+    flex: 1 1 45%; 
     max-width: 500px;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
 }
 
 .about-image {
@@ -137,7 +131,7 @@ h2::after {
 }
 
 .about-image:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.05); 
 }
 
 .about-text-content {
@@ -148,7 +142,7 @@ h2::after {
     color: #555;
 }
 
-/* --- Lessons Section Specifics --- */
+/* --- Lessons Section --- */
 .lessons-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -168,7 +162,7 @@ h2::after {
 }
 
 .lesson-card:hover {
-    transform: translateY(-10px); /* Lift card on hover */
+    transform: translateY(-10px); 
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
@@ -201,7 +195,7 @@ h2::after {
 }
 
 .lesson-card ul li::before {
-    content: '🌴'; /* Tropical icon bullet point */
+    content: '🌴'; 
     position: absolute;
     left: 0;
     color: #20B2AA;
@@ -210,19 +204,19 @@ h2::after {
 .lesson-card .price {
     font-family: 'Pacifico', cursive;
     font-size: 2.5rem;
-    color: #FF7F50; /* Coral/orange for price */
+    color: #FF7F50; 
     font-weight: bold;
-    margin-top: auto; /* Pushes price to bottom */
+    margin-top: auto; 
     margin-bottom: 25px;
-    display: block; /* Ensures it takes full width */
+    display: block; 
 }
 
-/* Ensure button is at the bottom of the card */
+
 .lesson-card .lesson-button {
     margin-top: auto;
 }
 
-/* --- Testimonials Section Specifics --- */
+/* --- Testimonials Section  --- */
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -234,7 +228,7 @@ h2::after {
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    border-left: 5px solid #20B2AA; /* Accent border */
+    border-left: 5px solid #20B2AA; 
 }
 
 .testimonial-card p {
@@ -250,42 +244,7 @@ h2::after {
     text-align: right;
 }
 
-/* --- Contact Section Specifics --- */
-.contact-info {
-    text-align: center;
-    margin-top: 40px;
-}
 
-.contact-info p {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    color: #555;
-}
-
-.contact-info p.phone span {
-    font-weight: bold;
-    color: #007bff;
-}
-
-.social-links {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.social-icon {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.social-icon:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
 
 /* --- Responsive Adjustments --- */
 @media (max-width: 992px) {

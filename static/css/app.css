@@ -18,7 +18,63 @@ body{
       
         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         background: linear-gradient(to left,  #00C9FF, #92FE9D);
+
+        padding: -10rem 0; /* This line controls top/bottom padding */
       }
+
+      .navbar-nav .nav-item .nav-link {
+        background-color: #06b6d4;
+        color: black; /* Text color remains white for contrast */
+        border: 1px solid #06b6d4; /* A solid border using the teal/cyan color from your header gradient */
+        padding: 8px 15px; /* Sufficient padding for button-like feel */
+        border-radius: 5px; /* Slightly rounded corners */
+        margin: 0 5px; /* Space between buttons */
+        transition: all 0.3s ease; /* Smooth transition for hover effects */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow to lift the buttons */
+        text-decoration: none; /* Ensure no underline */
+    }
+    
+    .navbar-nav .nav-item .nav-link:hover {
+        /* On hover, fill with your tropical gradient */
+        background: linear-gradient(to right, #00C9FF, #92FE9D);
+        border-color: transparent; /* Border disappears as the gradient fills */
+        color: white; /* Text remains white */
+        transform: translateY(-1px); /* Slight lift effect */
+        box-shadow: 0 4px 10px rgba(0, 190, 255, 0.4); /* More prominent glow on hover */
+    }
+    
+    /* Styling for the currently active link (e.g., "Home" when on homepage) */
+    .navbar-nav .nav-item .nav-link.active {
+        /* When active, always show the gradient and a clear white border */
+        background: linear-gradient(to right, #00C9FF, #92FE9D);
+        border-color: white; /* Stronger white border for the active state */
+        color: white;
+        box-shadow: 0 3px 8px rgba(0, 190, 255, 0.5); /* Slightly stronger shadow for active */
+        font-weight: bold; /* Make active text bold */
+    }
+    
+    /* --- Styling for the Login/Username button --- */
+    .d-flex .btn.btn-outline-dark {
+        background-color: transparent; /* Starts transparent */
+        color: white; /* Text color */
+        border: 1px solid #06b6d4; /* Matching border color */
+        padding: 8px 15px; /* Consistent padding */
+        border-radius: 5px; /* Consistent roundness */
+        margin-left: 10px; /* Space from other nav links */
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        text-decoration: none; /* Ensure no underline */
+    }
+    
+    .d-flex .btn.btn-outline-dark:hover {
+        /* On hover, fill with your tropical gradient */
+        background: linear-gradient(to right, #00C9FF, #92FE9D);
+        border-color: transparent; /* Border disappears */
+        color: white; /* Text remains white */
+        transform: translateY(-1px); /* Slight lift */
+        box-shadow: 0 4px 10px rgba(0, 190, 255, 0.4); /* More prominent glow */
+    }
+    
 
 .footer {
         /* fallback for old browsers */

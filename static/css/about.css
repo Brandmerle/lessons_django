@@ -10,11 +10,19 @@
     overflow: hidden;
 }
 
+.hero-content h1 {
+    font-family: 'Pacifico', cursive; 
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+}
+
 .hero-background-secondary .hero-overlay {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
 }
 
 .hero-background-secondary .hero-content h1 {
+    font-family: 'Pacifico', cursive;
     font-size: 3rem; /* Slightly smaller for internal page */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
@@ -60,11 +68,11 @@
 /* --- My Mission Section --- */
 #my-mission { /* Renamed from #our-mission */
     padding: 100px 0;
-    background-color: #e6f6f9; /* Light tropical background */
+    background-color: rgb(243, 234, 217); /* Light tropical background */
 }
 
 .bg-light-tropical {
-    background-color: #e6f6f9; /* Define this class if not already in main CSS */
+    background-color: rgb(243, 234, 217); /* Define this class if not already in main CSS */
 }
 
 .icon-text-block {
@@ -101,7 +109,7 @@
 /* --- Meet The Founder Section --- */
 #meet-the-founder { /* Renamed from #the-team */
     padding: 80px 0;
-    background-color: #f8fcfd;
+    background-color: rgb(243, 234, 217);
 }
 
 /* Reusing team-member-card styles for the single founder card */

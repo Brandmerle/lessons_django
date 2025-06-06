@@ -1,0 +1,273 @@
+
+.hero-background-contact {
+    position: relative;
+    height: 60vh; 
+    background: url('../img/efoil_7.jpg') no-repeat center center/cover; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff; 
+    overflow: hidden;
+}
+
+.hero-content h1 {
+    font-family: 'Pacifico', cursive; 
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+}
+
+.hero-background-contact .hero-content h2 {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 3rem; /* Slightly smaller than home hero h1, but adjustable */
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    color: #fff; 
+}
+
+.hero-background-contact .hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 2.5rem;
+    color: #007bff; 
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #20B2AA; 
+    border-radius: 2px;
+}
+
+
+/* --- Contact Grid Layout --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+    align-items: start; /* Align cards to the top */
+}
+
+/* --- General Card Styling for Contact Page Sections --- */
+.section-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: var(--shadow-card-light); /* Using variable from app.css */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Ensures cards are same height in a row */
+    display: flex;
+    flex-direction: column;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card-hover); /* Using variable from app.css */
+}
+
+.section-card h3 {
+    font-family: var(--font-poppins); /* Using variable from app.css */
+    font-size: 1.8rem;
+    color: #007bff; /* Using variable from app.css */
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* --- Contact Info Card Specifics --- */
+.contact-info-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.contact-info-card ul li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--text-medium); /* Using variable from app.css */
+    display: flex;
+    align-items: center;
+}
+
+.contact-info-card ul li strong {
+    margin-right: 10px;
+    color: var(--text-dark); /* Using variable from app.css */
+}
+
+.contact-info-card ul li a {
+    color: var(--primary-blue); /* Using variable from app.css */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-info-card ul li a:hover {
+    color: var(--accent-teal); /* Using variable from app.css */
+}
+
+.contact-info-card p {
+    font-size: 1rem;
+    color: var(--text-light); /* Using variable from app.css */
+    line-height: 1.6;
+    margin-top: auto;
+}
+.contact-logo-wrapper {
+    text-align: center; /* Center the logo */
+    margin-top: 70px;   /* Space above the logo */
+    margin-bottom: 25px; /* Space below the logo and before the paragraph */
+}
+
+.contact-logo {
+    max-width: 800px; /* Adjust as needed - control the logo's size */
+    height: auto;
+    display: block; /* Ensure it behaves like a block element for max-width/centering */
+    margin: 0 auto; /* Center the logo if max-width is less than parent */
+}
+
+/* --- Contact Form Card Specifics --- */
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-dark); /* Using variable from app.css */
+}
+
+.contact-form .form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-dark); /* Using variable from app.css */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.contact-form .form-control:focus {
+    border-color: var(--primary-blue); /* Using variable from app.css */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.contact-form textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-submit-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(to right, #00C9FF, #92FE9D); 
+    color: white;
+    text-decoration: none;
+    border-radius: 50px; 
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 190, 255, 0.4); 
+}
+
+.form-submit-button:hover {
+    background: linear-gradient(to right, #92FE9D, #00C9FF); 
+    box-shadow: 0 8px 20px rgba(0, 190, 255, 0.6);
+    transform: translateY(-3px); 
+}
+
+/* --- Map Section Specifics --- */
+.map-section {
+    text-align: center;
+    padding: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.map-section p {
+    margin-bottom: 25px;
+    color: var(--text-medium); /* Using variable from app.css */
+    font-size: 1.1rem;
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- Responsive Adjustments for Contact Page --- */
+@media (max-width: 992px) {
+    .hero-background-contact {
+        height: 50vh;
+    }
+
+    .hero-background-contact .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-background-contact .hero-content p {
+        font-size: 1rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+
+    .section-card {
+        padding: 25px;
+    }
+
+    .section-card h3 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-background-contact {
+        height: 40vh;
+    }
+
+    .hero-background-contact .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .section-card {
+        padding: 20px;
+    }
+
+    .section-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .map-section {
+        padding: 20px;
+    }
+}
