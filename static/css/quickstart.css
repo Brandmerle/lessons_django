@@ -1,202 +1,541 @@
 /*
- * This stylesheet contains styles specific to the Quick Start Guide page.
- * It is intended to be loaded *after* your main global stylesheet (app.css)
- * to ensure that global styles are applied first, and these provide
- * page-specific additions or overrides.
+ * This stylesheet contains ALL styles necessary for the Quick Start Guide page.
+ * It does NOT rely on a global 'app.css' file for any styling definitions.
  */
 
-/* --- Hero Section Overrides (if needed) --- */
-/*
- * The hero-background, hero-overlay, hero-content, h2, and p within the hero
- * will largely inherit from app.css.
- * Any specific adjustments for this page's hero can go here.
- */
- .hero-background {
-    /* Example: If you want a different background image for this hero */
-    background: url('../img/quickstart_hero.jpeg') no-repeat center center/cover;
+/* --- Global / Base Styles (Typically in app.css, now included here) --- */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color:rgb(243, 234, 217);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* --- Section Card Specifics for Quick Start Guide --- */
-/*
- * These styles enhance the base .section-card from app.css
- * to fit the content-grid layout.
- */
-.section-card {
-    margin-bottom: 50px; /* Space between the section cards */
-    padding: 40px; /* A bit more internal padding for these content-heavy cards */
-    background-color: #fff; /* Ensure white background for content cards */
-    border-radius: 15px; /* Rounded corners for the card */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Soft shadow from app.css variable */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #007bff; /* Primary blue */
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
-.section-card:hover {
-    transform: translateY(-5px); /* Lift card on hover */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
-}
-
-.section-card h3 {
-    font-family: var(--font-poppins); /* From app.css variable */
-    font-size: 2.2rem; /* Slightly larger heading for these sections */
-    color: var(--primary-blue); /* From app.css variable */
+h1 { font-size: 3.5rem; }
+h2 {
+    font-size: 2.5rem;
+    position: relative;
     text-align: center;
-    margin-bottom: 30px;
-    position: relative; /* For the ::after underline effect */
+    margin-bottom: 40px;
 }
-
-/* Reapply the H2 ::after style for H3s in section-cards, if desired for visual consistency */
-.section-card h3::after {
+h2::after {
     content: '';
     position: absolute;
     left: 50%;
-    bottom: -10px; /* Adjust vertical position */
+    bottom: -10px;
     transform: translateX(-50%);
-    width: 60px; /* Slightly shorter underline */
-    height: 3px; /* Slightly thinner underline */
-    background-color: var(--accent-teal); /* From app.css variable */
+    width: 80px;
+    height: 4px;
+    background-color: #20B2AA; /* Accent teal */
     border-radius: 2px;
+}
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.4rem; }
+
+p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Layout Helpers */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Section Base Styling */
+section {
+    padding: 60px 0;
+    background-color: rgb(243, 234, 217);
+}
+
+/* Card Styling (Common to all section-cards) */
+.section-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Tropical Button Base Styling (Enhanced) --- */
+.tropical-button {
+    display: inline-block;
+    background: linear-gradient(to right, #00c0ff, #20B2AA); /* Tropical gradient colors */
+    color: white;
+    padding: 15px 30px; /* Slightly more generous padding for a standard button */
+    border-radius: 35px; /* More rounded */
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; /* Ensuring Poppins font is applied */
+    font-weight: 600;
+    font-size: 1.15rem; /* Slightly larger font size for prominence */
+    line-height: 1; /* Ensure text sits correctly */
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 190, 255, 0.4); /* Stronger, matching shadow */
+    transition: all 0.3s ease-in-out; /* Smoother transition */
+    text-align: center;
+    white-space: nowrap; /* Prevent text wrapping on small buttons */
+}
+
+.tropical-button:hover {
+    transform: translateY(-4px); /* More pronounced lift */
+    box-shadow: 0 10px 30px rgba(0, 190, 255, 0.6); /* Even stronger shadow on hover */
+    opacity: 1; /* Ensure full opacity */
+}
+
+.tropical-button:active {
+    transform: translateY(-1px); /* Slight press effect */
+    box-shadow: 0 3px 10px rgba(0, 190, 255, 0.3); /* Reduced shadow on click */
+}
+
+
+/* --- Hero Section Base Styles --- */
+.hero-background {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../img/efoil_11.png'); /* Placeholder/default hero image path */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    max-width: 800px;
+}
+
+.hero-content h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3.5rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    margin-bottom: 30px;
+}
+
+
+/* --- Quick Start Page Specific Styles --- */
+
+/* Hero Section Overrides */
+.quickstart-hero {
+    background: url('../img/quickstart_hero.jpeg') no-repeat center center/cover;
+    height: 80vh; /* Make it a bit taller for more impact */
+}
+
+.quickstart-hero .hero-content h1.hero-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 4rem;
+    margin-bottom: 25px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.quickstart-hero .hero-content p.hero-subtitle {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.quickstart-hero .tropical-button.hero-button {
+    padding: 18px 35px; /* Larger padding for the hero button */
+    font-size: 1.3rem;
+}
+
+/* --- Introduction Section --- */
+.quickstart-intro-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.quickstart-intro-section h2 {
+    margin-bottom: 30px;
+}
+
+.quickstart-intro-section .lead-text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 0 auto;
+    color: #333;
+}
+
+/* --- General Quick Start Section Styling --- */
+.quickstart-section {
+    padding: 80px 0;
+}
+
+.quickstart-section.light-bg {
+    background-color: #f8f9fa;
+}
+
+.quickstart-section.dark-bg {
+    background-color: #f0f8ff;
+}
+
+.quickstart-section h2 {
+    margin-bottom: 40px;
+}
+
+.quickstart-section .section-description {
+    font-size: 1.15rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.7;
+    text-align: center;
 }
 
 /* --- Content Grid for Text and Image Layout --- */
 .content-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns by default */
-    gap: 40px; /* Space between columns */
-    align-items: center; /* Vertically align content */
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
-.content-grid > div {
-    /* Basic styling for direct children of content-grid if needed */
+.content-grid-reverse {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
-.content-grid p {
+.content-grid-reverse .content-text-block {
+    order: 2;
+}
+
+.content-grid-reverse .section-image-wrapper {
+    order: 1;
+}
+
+.content-text-block p {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: var(--text-medium); /* From app.css variable */
-    margin-bottom: 15px;
+    color: #333;
+    margin-bottom: 18px;
 }
 
 .section-image-wrapper {
-    border-radius: 10px; /* Slightly less rounded than about section */
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
+}
+
+.section-image-wrapper.framed-image {
+    border: 5px solid white;
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
 }
 
 .section-image-wrapper img {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .section-image-wrapper img:hover {
-    transform: scale(1.03); /* Slight zoom on hover */
+    transform: scale(1.05);
 }
 
 /* --- Safety Tips Bullet List --- */
-.bullet-list {
-    list-style: none; /* Remove default bullets */
+.bullet-list.checklist-icon {
+    list-style: none;
     padding: 0;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.bullet-list li {
+.bullet-list.checklist-icon li {
     font-size: 1.1rem;
-    line-height: 1.6;
-    color: var(--text-dark); /* From app.css variable */
-    margin-bottom: 10px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 12px;
     position: relative;
-    padding-left: 30px; /* Space for custom bullet */
+    padding-left: 40px;
 }
 
-.bullet-list li::before {
-    content: '✅'; /* Green checkmark emoji */
+.bullet-list.checklist-icon li::before {
+    content: '✅';
     position: absolute;
     left: 0;
-    color: var(--accent-teal); /* Match your accent color */
-    font-size: 1.2em;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #20B2AA;
+    font-size: 1.5em;
 }
 
 /* --- Beginner Steps Numbered List --- */
-.numbered-list {
-    list-style: none; /* Remove default numbering */
+.numbered-list.icon-numbers {
+    list-style: none;
     padding: 0;
-    counter-reset: step-counter; /* Initialize a counter */
-    margin-top: 30px;
+    counter-reset: step-counter;
+    margin-top: 40px;
 }
 
-.numbered-list li {
-    margin-bottom: 30px; /* Space between steps */
+.numbered-list.icon-numbers li {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-    padding-left: 60px; /* Space for the custom number */
+    padding-left: 80px;
 }
 
-.numbered-list li::before {
-    counter-increment: step-counter; /* Increment counter for each list item */
-    content: counter(step-counter); /* Display the counter number */
+.numbered-list.icon-numbers li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.numbered-list.icon-numbers li::before {
+    counter-increment: step-counter;
+    content: counter(step-counter);
     position: absolute;
-    left: 0;
-    top: 0; /* Align with the top of the content */
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end)); /* Your tropical gradient */
+    left: 20px;
+    top: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to right, #00c0ff, #20B2AA);
     color: white;
-    border-radius: 50%; /* Make it a circle */
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0, 190, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 190, 255, 0.4);
+    z-index: 1;
 }
 
-.numbered-list li h4 {
-    font-family: var(--font-poppins);
-    font-size: 1.5rem;
-    color: var(--primary-blue);
-    margin-bottom: 10px;
-    margin-top: 0; /* Remove default h4 top margin */
+.numbered-list.icon-numbers li h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    color: #007bff;
+    margin-bottom: 8px;
+    margin-top: 0;
 }
 
-.numbered-list li p {
-    font-size: 1rem;
-    color: var(--text-medium);
-    line-height: 1.6;
+.numbered-list.icon-numbers li p {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.7;
 }
+
+
+/* --- Call to Action Section --- */
+.quickstart-cta {
+    padding: 80px 0;
+    background:rgb(243, 234, 217);
+    color: #007bff;
+    text-align: center;
+}
+
+.quickstart-cta h2 {
+    color: white;
+    margin-bottom: 25px;
+}
+
+.quickstart-cta h2::after {
+    background-color: white;
+}
+
+
+.quickstart-cta .section-description {
+    color: white;
+    max-width: 900px;
+    margin: 0 auto 35px auto;
+    font-size: 1.2rem;
+}
+
+.quickstart-cta .tropical-button.large-button {
+    padding: 20px 40px; /* Even larger CTA button */
+    font-size: 1.4rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.quickstart-cta .tropical-button.large-button:hover {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
 
 /* --- Responsive Adjustments --- */
 @media (max-width: 992px) {
-    .content-grid {
-        grid-template-columns: 1fr; /* Stack columns on smaller screens */
-        gap: 30px;
+    .quickstart-hero {
+        height: 65vh;
+    }
+    .quickstart-hero .hero-content h1.hero-title {
+        font-size: 3.5rem;
+    }
+    .quickstart-hero .hero-content p.hero-subtitle {
+        font-size: 1.3rem;
+    }
+    .quickstart-hero .tropical-button.hero-button {
+        padding: 15px 30px;
+        font-size: 1.2rem;
     }
 
-    .section-card {
-        padding: 30px;
+    .quickstart-intro-section .lead-text {
+        font-size: 1.15rem;
     }
 
-    .section-card h3 {
-        font-size: 1.8rem;
-        margin-bottom: 25px;
+    .content-grid, .content-grid-reverse {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .content-grid-reverse .content-text-block {
+        order: 1;
+    }
+    .content-grid-reverse .section-image-wrapper {
+        order: 2;
     }
 
-    .section-card h3::after {
-        width: 50px;
-        height: 2px;
+    .bullet-list.checklist-icon li {
+        font-size: 1rem;
+        padding-left: 35px;
+    }
+    .bullet-list.checklist-icon li::before {
+        font-size: 1.3em;
     }
 
-    .content-grid > div:nth-child(even) {
-        order: -1; /* For safety tips, put image first on mobile */
+    .numbered-list.icon-numbers li {
+        padding: 25px;
+        padding-left: 70px;
+    }
+    .numbered-list.icon-numbers li::before {
+        left: 15px;
+        top: 25px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.6rem;
+    }
+    .numbered-list.icon-numbers li h4 {
+        font-size: 1.4rem;
+    }
+    .numbered-list.icon-numbers li p {
+        font-size: 1rem;
+    }
+
+    .tropical-button { /* Adjust base button size for smaller screens */
+        padding: 12px 25px;
+        font-size: 1.05rem;
     }
 }
 
 @media (max-width: 768px) {
-    .hero-background .hero-content h2 {
-        font-size: 2.5rem;
+    .quickstart-hero {
+        height: 55vh;
+    }
+    .quickstart-hero .hero-content h1.hero-title {
+        font-size: 2.8rem;
+    }
+    .quickstart-hero .hero-content p.hero-subtitle {
+        font-size: 1.1rem;
     }
 
-    .hero-background .hero-content p {
-        font-size: 1rem;
+    .quickstart-section, .quickstart-intro-section, .quickstart-cta {
+        padding: 50px 0;
     }
+
+    .quickstart-section h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    .quickstart-section .section-description {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .content-grid, .content-grid-reverse {
+        gap: 30px;
+    }
+
+    .numbered-list.icon-numbers li {
+        padding: 20px;
+        padding-left: 60px;
+    }
+    .numbered-list.icon-numbers li::before {
+        width: 40px;
+        height: 40px;
+        font-size: 1.4rem;
+        left: 10px;
+        top: 20px;
+    }
+    .numbered-list.icon-numbers li h4 {
+        font-size: 1.25rem;
+    }
+
+    .quickstart-cta h2 {
+        font-size: 2.2rem;
+    }
+    .quickstart-cta .section-description {
+        font-size: 1.05rem;
+    }
+    .quickstart-cta .tropical-button.large-button {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+    }
+}
