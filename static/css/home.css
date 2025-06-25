@@ -1,19 +1,91 @@
 body {
-    font-family: 'Open Sans', sans-serif; 
-    color: #333; 
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: rgb(243, 234, 217);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-osx-font-smoothing: grayscale;
 }
 
-/* --- Hero Section Styling --- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #007bff;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 3.5rem; }
+h2 {
+    font-size: 2.5rem;
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 60px;
+}
+h2:first-of-type {
+    margin-top: 0;
+}
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #20B2AA;
+    border-radius: 2px;
+}
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.4rem; }
+
+p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #0056b3;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+section {
+    padding: 60px 0;
+    background-color: rgb(243, 234, 217);
+}
+
 .hero-background {
     position: relative;
-    height: 70vh; 
-    background:  url('../img/foil1.jpeg') no-repeat center center/cover;
+    width: 100%;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #fff;
-    overflow: hidden; 
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    background-image: url('../img/foil1.jpeg');
 }
 
 .hero-overlay {
@@ -22,131 +94,61 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
-    z-index: 1; 
+    background-color: rgba(0, 0, 0, 0.032);
+    z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2; 
+    z-index: 2;
     padding: 20px;
-    max-width: 800px;
+    max-width: 900px;
 }
 
 .hero-content h1 {
-    font-family: 'Pacifico', cursive; 
-    font-size: 3.5rem;
+    font-family: 'Pacifico', cursive;
+    font-size: 4.5rem;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
 }
 
 .hero-content p {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: wheat;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);;
+    margin-bottom: 40px;
 }
 
-
-section {
-    padding: 80px 0;
-    background-color: rgb(243, 234, 217); 
-}
-
-section:nth-of-type(even) {
-    background-color: rgb(243, 234, 217); 
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-h2 {
-    font-family: 'Poppins', sans-serif; 
-    font-size: 2.5rem;
-    color: #007bff; 
-    text-align: center;
-    margin-bottom: 60px;
-    position: relative;
-}
-
-h2::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -15px;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background-color: #20B2AA; 
-    border-radius: 2px;
-}
-
-/* --- Tropical Button Styling --- */
-.tropical-button,
-.lesson-button {
+.tropical-button {
     display: inline-block;
-    padding: 15px 30px;
-    background: linear-gradient(to right, #00C9FF, #92FE9D); 
+    background: linear-gradient(to right, #00c0ff, #20B2AA);
     color: white;
+    padding: 15px 30px;
+    border-radius: 35px;
     text-decoration: none;
-    border-radius: 50px; 
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 190, 255, 0.4); 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    line-height: 1;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 190, 255, 0.4);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    white-space: nowrap;
 }
 
-.tropical-button:hover,
-.lesson-button:hover {
-    background: linear-gradient(to right, #92FE9D, #00C9FF); 
-    box-shadow: 0 8px 20px rgba(0, 190, 255, 0.6);
-    transform: translateY(-3px); 
+.tropical-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 190, 255, 0.6);
+    opacity: 1;
 }
 
-/* --- About Section --- */
-.about-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    align-items: center;
-    justify-content: center;
-}
-
-.about-image-wrapper {
-    flex: 1 1 45%; 
-    max-width: 500px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
-}
-
-.about-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.about-image:hover {
-    transform: scale(1.05); 
-}
-
-.about-text-content {
-    flex: 1 1 45%;
-    max-width: 600px;
-    line-height: 1.8;
-    font-size: 1.1rem;
-    color: #555;
-}
-
-/* --- Lessons Section --- */
-.lessons-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+.tropical-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 190, 255, 0.3);
 }
 
 .lesson-card {
@@ -159,144 +161,318 @@ h2::after {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 0 auto 60px auto;
+    max-width: 900px;
 }
 
 .lesson-card:hover {
-    transform: translateY(-10px); 
+    transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
 .lesson-card h3 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.8rem;
     color: #007bff;
     margin-bottom: 15px;
 }
 
 .lesson-card p {
     font-size: 1rem;
-    color: #666;
+    color: rgba(0, 0, 0, 0.6);;
     line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.lesson-card ul {
-    list-style: none;
-    padding: 0;
     margin-bottom: 20px;
     text-align: left;
-    color: #444;
-}
-
-.lesson-card ul li {
-    margin-bottom: 8px;
-    position: relative;
-    padding-left: 25px;
-}
-
-.lesson-card ul li::before {
-    content: '🌴'; 
-    position: absolute;
-    left: 0;
-    color: #20B2AA;
-}
-
-.lesson-card .price {
-    font-family: 'Pacifico', cursive;
-    font-size: 2.5rem;
-    color: #FF7F50; 
-    font-weight: bold;
-    margin-top: auto; 
-    margin-bottom: 25px;
-    display: block; 
 }
 
 
-.lesson-card .lesson-button {
-    margin-top: auto;
+/* About Section */
+#about .about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-direction: row;
 }
 
-/* --- Testimonials Section  --- */
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+#about .about-image-wrapper {
+    flex: 1.5; /* Made the image wrapper larger */
+    min-width: 300px;
 }
 
-.testimonial-card {
-    background-color: #fff;
+#about .about-image {
+    max-width: 100%;
+    height: auto;
     border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    border-left: 5px solid #20B2AA; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.testimonial-card p {
-    font-style: italic;
-    color: #555;
-    line-height: 1.6;
+/* Framed Image Style (copied from quickstart.css) */
+.framed-image img {
+    border: 5px solid #20B2AA;
+}
+
+#about .about-text-content {
+    flex: 2;
+}
+
+#about p {
     margin-bottom: 15px;
 }
 
-.testimonial-card .author {
-    font-weight: bold;
-    color: #007bff;
-    text-align: right;
+/* Lessons Section */
+#lessons .lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
+#lessons .lesson-card {
+    padding: 25px;
+    margin: 0;
+    justify-content: flex-start;
+    text-align: center;
+    height: 100%;
+    box-sizing: border-box;
+}
 
+#lessons .lesson-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
 
-/* --- Responsive Adjustments --- */
+#lessons .lesson-card p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+#lessons .lesson-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+    text-align: left;
+}
+
+#lessons .lesson-card ul li {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 25px;
+    color: #555;
+}
+
+#lessons .lesson-card ul li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #20B2AA;
+    font-size: 0.9rem;
+    top: 2px;
+}
+
+#lessons .lesson-card .price {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 25px;
+}
+
+#lessons .lesson-card .lesson-button {
+    width: auto;
+    padding: 12px 25px;
+    font-size: 1rem;
+    margin-top: auto;
+}
+
+/* Testimonials Section */
+#testimonials .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#testimonials .testimonial-card {
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 0;
+}
+#testimonials .testimonial-card p {
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#testimonials .testimonial-card .author {
+    font-weight: 600;
+    color: #007bff;
+    font-style: normal;
+    font-size: 0.95rem;
+}
+
+/* Contact Section */
+#contact .contact-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#contact p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+#contact .contact-info {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .contact-info .phone {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #007bff;
+}
+
+#contact .contact-info .phone span {
+    color: #20B2AA;
+}
+
 @media (max-width: 992px) {
     .hero-content h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
-
     .hero-content p {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+        margin-top: 50px;
     }
 
-    .about-content {
+    #about .about-content {
         flex-direction: column;
-        text-align: center;
+        gap: 30px;
     }
 
-    .about-image-wrapper,
-    .about-text-content {
-        flex: 1 1 100%;
-        max-width: 100%;
+    #lessons .lessons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #lessons .lesson-card {
+        margin-bottom: 30px;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #lessons .lesson-card:last-child {
+        margin-bottom: 0;
+    }
+
+    #testimonials .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #testimonials .testimonial-card {
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #contact .contact-content {
+        padding: 30px;
     }
 }
 
 @media (max-width: 768px) {
+    .hero-background {
+        height: 60vh;
+    }
     .hero-content h1 {
         font-size: 2.5rem;
     }
-
     .hero-content p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     section {
-        padding: 60px 0;
+        padding: 40px 0;
     }
 
     h2 {
         font-size: 1.8rem;
+        margin-bottom: 25px;
+        margin-top: 40px;
     }
 
-    .lessons-grid,
-    .testimonials-grid {
-        grid-template-columns: 1fr; 
+    .lesson-card {
+        padding: 20px;
     }
 
-    .tropical-button,
-    .lesson-button {
-        padding: 12px 25px;
+    #about .about-image {
+        border-radius: 10px;
+    }
+    #about .about-image-wrapper {
+        margin-bottom: 20px;
+    }
+
+    #lessons .lesson-card h3 {
+        font-size: 1.4rem;
+    }
+    #lessons .lesson-card p {
+        font-size: 0.9rem;
+    }
+    #lessons .lesson-card ul li {
+        font-size: 0.85rem;
+    }
+    #lessons .lesson-card .price {
+        font-size: 1.8rem;
+    }
+    #lessons .lesson-card .lesson-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    #testimonials .testimonial-card p {
+        font-size: 0.95rem;
+    }
+    #testimonials .testimonial-card .author {
+        font-size: 0.85rem;
+    }
+
+    #contact .contact-content {
+        padding: 25px;
+    }
+    #contact p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    #contact .contact-info .phone {
         font-size: 1rem;
     }
 }

@@ -15,25 +15,24 @@
         <div class="hero-overlay"></div>
         <div class="hero-content text-center">
             <h1>My Journey: Flying into the Future</h1>
-            <p>Discover the passion and vision behind ADV eFoils.</p>
+            <p>Discover the passion and vision behind Isla eFoils.</p>
         </div>
     </section>
 
-    <section> {# This section now wraps the container for all cards #}
+    <section class="page-content-section">
         <div class="container">
-            {# --- Our Story Section --- #}
-            <div id="our-story" class="section-card"> {# Added section-card here #}
-                <h2>My Story: Where the Glide Began</h2>
+            <h2>My Story: Where the Glide Began</h2>
+            <div id="our-story" class="lesson-card">
                 <div class="row align-items-center">
                     <div class="col-md-6 order-md-2">
-                        <div class="image-wrapper">
+                        <div class="image-wrapper framed-image">
                             <img src="{% static 'img/efoil_3.jpeg' %}" alt="Founder on efoil at sunset" class="img-fluid rounded-corners-shadow">
                         </div>
                     </div>
                     <div class="col-md-6 order-md-1">
                         <p>
-                            Hello, I'm Brandon, the passionate waterman behind ADV eFoils.
-                            Founded in **2025**, this business emerged from my lifelong passion for the water and sharing the exhilarating experience of
+                            Hello, I'm Kelly, the passionate waterman behind Isla eFoils.
+                            Founded in 2025, this business emerged from my lifelong passion for the water and sharing the exhilarating experience of
                             foiling with everyone, regardless of wave conditions. I envisioned a world
                             where the freedom of flight over water wasn't limited by tides or wind, but powered
                             by sustainable, cutting-edge technology. ADV eFoils stands as a testament to my dedication and passion, offering premium
@@ -44,10 +43,9 @@
                 </div>
             </div>
 
-            {# --- My Mission Section --- #}
-            <div id="my-mission" class="section-card"> {# Added section-card here #}
-                <h2>My Mission: Sharing the Stoke of eFoil Flight</h2>
-                <div class="row align-items-center">
+            <h2>My Mission: Sharing the Stoke of eFoil Flight</h2>
+            <div id="my-mission" class="lesson-card">
+                <div class="row">
                     <div class="col-md-6">
                         <div class="icon-text-block">
                             <h3><i class="fas fa-leaf tropical-icon"></i> Eco-Conscious Adventure</h3>
@@ -70,16 +68,16 @@
                         <div class="icon-text-block">
                             <h3><i class="fas fa-lightbulb tropical-icon"></i> Innovation & Excellence</h3>
                             <p>
-                                I'm always refining how I teach, using innovative methodsto ensure every lesson is clear,
+                                Refinement and innovation ensures every lesson is clear,
                                 fun, and gets you flying faster. I pair this with top-tier eFoils from WayDoo for a safe and
                                 exhilarating experience, ensuring you're learning on the best equipment the industry has to
                                 offer.
                             </p>
                         </div>
                         <div class="icon-text-block">
-                            <h3><i class="fas fa-hand-holding-heart tropical-icon"></i> Passion & Personalized Experience</h3>
+                            <h3><i class="fas fa-hand-holding-heart tropical-icon"></i> Passion & Personalization</h3>
                             <p>
-                                At the core of ADV eFoils is my deep passion for water sports and adventure. I am a
+                                At the core of Isla eFoils is my deep passion for water sports and adventure. I am a
                                 certified instructor and fellow enthusiast dedicated to sharing my love for eFoiling
                                 and ensuring every lesson is a personalized, unforgettable ride.
                             </p>
@@ -88,17 +86,16 @@
                 </div>
             </div>
 
-            {# --- Meet The Founder Section --- #}
-            <div id="meet-the-founder" class="section-card"> {# Added section-card here #}
-                <h2>Meet Your ADV eFoil Instructor</h2>
+            <h2>Meet Your Isla eFoil Instructor</h2>
+            <div id="meet-the-founder" class="lesson-card">
                 <div class="row justify-content-center">
-                    <div class="col-md-8 col-lg-6"> {# Center the single card, removed mb-4 because section-card has margin-bottom #}
+                    <div class="col-md-8 col-lg-6">
                         <div class="team-member-card">
-                            <img src="{% static 'img/efoil_6.jpg' %}" alt="Your Photo" class="img-fluid rounded-circle team-photo">
-                            <h3>Brandon Merle</h3>
+                            <img src="{% static 'img/efpil_6.jpg' %}" alt="Your Photo" class="img-fluid rounded-circle team-photo">
+                            <h3>Kelly Slater</h3>
                             <p class="role">Founder & Lead Instructor</p>
                             <p class="bio">
-                                As the sole operator of ADV eFoils, I personally guide every student through their efoiling
+                                As the sole operator of Isla eFoils, I personally guide every student through their efoiling
                                 journey. With years of experience on the water and a deep understanding of efoil mechanics,
                                 I'm committed to providing a safe, fun, and truly personalized learning experience.
                                 My passion for the ocean and the thrill of gliding is something I love to share, ensuring
@@ -112,14 +109,13 @@
         </div>
     </section>
 
-    {# --- CTA Section (reused from home.css) --- #}
     <section id="cta-about">
         <div class="container text-center">
             <h2>Ready to Experience the Glide?</h2>
             <p class="lead" style="max-width: 700px; margin: 0 auto 30px;">
                 I'm excited to share the thrill of efoiling with you. Let's make some waves!
             </p>
-            <a href="#"  class="tropical-button inverted-button">Book Your Adventure Now!</a>
+            <a href="#" class="tropical-button inverted-button">Book Your Adventure Now!</a>
         </div>
     </section>
 

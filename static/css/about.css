@@ -1,236 +1,424 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color:rgb(243, 234, 217);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #007bff;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 3.5rem; }
+h2 {
+    font-size: 2.5rem;
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 60px;
+}
+h2:first-of-type {
+    margin-top: 0;
+}
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #20B2AA;
+    border-radius: 2px;
+}
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.4rem; }
+
+p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #0056b3;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+section {
+    padding: 60px 0;
+    background-color: rgb(243, 234, 217);
+}
+
+.tropical-button {
+    display: inline-block;
+    background: linear-gradient(to right, #00c0ff, #20B2AA);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    line-height: 1;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 190, 255, 0.4);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.tropical-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 190, 255, 0.6);
+    opacity: 1;
+}
+
+.tropical-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 190, 255, 0.3);
+}
+
+.tropical-button.inverted-button {
+    background: none;
+    background-color: #fff;
+    color: #007bff;
+    border: 2px solid #007bff;
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2);
+}
+
+.tropical-button.inverted-button:hover {
+    background-color: #e2f2ff;
+    color: #0056b3;
+    border-color: #0056b3;
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.4);
+}
+
 .hero-background-secondary {
     position: relative;
-    height: 50vh; /* Slightly shorter hero for internal page */
-    background: url('../img/efoil_5.webp') no-repeat center center/cover; /* Different hero image */
+    width: 100%;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #fff;
-    overflow: hidden;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../img/foil33.jpg');
 }
 
-.hero-content h1 {
-    font-family: 'Pacifico', cursive; 
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
-.hero-background-secondary .hero-overlay {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+    max-width: 800px;
 }
 
-.hero-background-secondary .hero-content h1 {
+.hero-content h1, .hero-content h2 {
     font-family: 'Pacifico', cursive;
-    font-size: 3rem; /* Slightly smaller for internal page */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-.hero-background-secondary .hero-content p {
-    font-size: 1.1rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-/* --- Our Story Section --- */
-#our-story .row {
-    margin-top: 40px;
-}
-
-#our-story .image-wrapper {
-    padding: 15px; /* Space for shadow */
-    background-color: transparent;
-    border-radius: 20px; /* More pronounced rounded corners */
-}
-
-.img-fluid.rounded-corners-shadow {
-    border-radius: 15px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Deeper shadow for images */
-    transition: transform 0.3s ease;
-}
-
-.img-fluid.rounded-corners-shadow:hover {
-    transform: translateY(-5px); /* Lift on hover */
-}
-
-#our-story p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-#our-story p strong {
-    color: #007bff; /* Highlight company name and founding year */
-}
-
-
-/* --- My Mission Section --- */
-#my-mission { /* Renamed from #our-mission */
-    padding: 100px 0;
-    background-color: rgb(243, 234, 217); /* Light tropical background */
-}
-
-.bg-light-tropical {
-    background-color: rgb(243, 234, 217); /* Define this class if not already in main CSS */
-}
-
-.icon-text-block {
-    margin-bottom: 40px;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.icon-text-block h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.6rem;
-    color: #20B2AA; /* Teal for mission points */
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.tropical-icon {
-    font-size: 1.8rem;
-    color: #FF7F50; /* Coral accent for icons */
-    margin-right: 15px;
-    min-width: 40px; /* Ensure icon doesn't shrink */
+    font-size: 3.5rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
     text-align: center;
 }
 
-.icon-text-block p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
-    flex-grow: 1;
+.hero-content p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: wheat;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    margin-bottom: 30px;
 }
 
-/* --- Meet The Founder Section --- */
-#meet-the-founder { /* Renamed from #the-team */
+.page-content-section {
     padding: 80px 0;
     background-color: rgb(243, 234, 217);
 }
 
-/* Reusing team-member-card styles for the single founder card */
-.team-member-card {
+.lesson-card {
     background-color: #fff;
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Removed height: 100% and flex-direction related to multiple cards */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content vertically */
+    justify-content: space-between;
+    margin: 0 auto 60px auto;
+    max-width: 900px;
 }
 
-.team-member-card:hover {
+.lesson-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
-.team-photo { /* Reusing team-photo style */
-    width: 180px; /* Slightly larger photo for emphasis */
-    height: 180px;
-    object-fit: cover;
-    border: 5px solid #007bff; /* Blue border for photo */
-    margin: 0 auto 25px; /* Adjust margin */
-    transition: border-color 0.3s ease;
+.lesson-card h2,
+.lesson-card h3,
+.lesson-card h4 {
+    font-family: 'Poppins', sans-serif;
+    color: #007bff;
+    margin-bottom: 15px;
 }
 
-.team-member-card:hover .team-photo {
-    border-color: #20B2AA; /* Teal border on hover */
+.lesson-card h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #20B2AA;
+    border-radius: 2px;
+}
+
+.lesson-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#our-story p,
+#my-mission .icon-text-block p {
+    text-align: left;
+}
+
+.image-wrapper img.rounded-corners-shadow {
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.framed-image img {
+    border: 5px solid #20B2AA;
+}
+
+.image-wrapper img.rounded-corners-shadow:hover {
+    transform: scale(1.02);
+}
+
+.icon-text-block {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.icon-text-block:last-child {
+    margin-bottom: 0;
+}
+
+.icon-text-block h3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #007bff;
+    font-size: 1.6rem;
+}
+
+.icon-text-block .tropical-icon {
+    font-size: 2.5rem;
+    color: #20B2AA;
+    margin-right: 20px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.icon-text-block p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+.team-member-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+}
+
+.team-member-card .team-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #20B2AA;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .team-member-card h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.9rem; /* Slightly larger for emphasis */
+    font-size: 2rem;
+    margin-bottom: 5px;
     color: #007bff;
-    margin-bottom: 8px;
 }
 
 .team-member-card .role {
-    font-weight: bold;
-    color: #FF7F50; /* Coral for role */
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 15px;
+    font-style: italic;
 }
 
 .team-member-card .bio {
-    font-size: 1.05rem; /* Slightly larger for main bio */
-    color: #666;
+    font-size: 1rem;
+    color: #444;
     line-height: 1.7;
-    margin-bottom: 25px; /* Space before button */
+    margin-bottom: 25px;
+    text-align: center;
 }
 
-/* --- CTA Section --- */
 #cta-about {
-    padding: 100px 0;
-    background: rgb(243, 234, 217);
-    color: white;
+    padding: 80px 0;
+    background-color: rgb(243, 234, 217);
+    text-align: center;
 }
 
-.inverted-button {
-    background: white;
+#cta-about h2 {
     color: #007bff;
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+    margin-bottom: 25px;
 }
 
-.inverted-button:hover {
-    background: lightgray;
-    color: #0056b3;
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.6);
+#cta-about h2::after {
+    background-color: #20B2AA;
 }
 
-/* --- Responsive Adjustments --- */
+#cta-about .lead {
+    color: #333;
+}
+
+@media (max-width: 992px) {
+    .hero-background-secondary {
+        height: 50vh;
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .lesson-card {
+        padding: 25px;
+        margin-bottom: 40px;
+    }
+
+    .row.align-items-center > div {
+        order: unset !important;
+    }
+    .row.align-items-center > div:first-child {
+        margin-bottom: 30px;
+    }
+
+    .image-wrapper {
+        margin-bottom: 25px;
+    }
+
+    .icon-text-block {
+        margin-bottom: 20px;
+    }
+    .icon-text-block:last-child {
+        margin-bottom: 0;
+    }
+
+    .team-member-card {
+        padding: 25px;
+    }
+}
+
 @media (max-width: 768px) {
-    #about-hero {
+    .hero-background-secondary {
         height: 40vh;
     }
-    #about-hero .hero-content h1 {
-        font-size: 2.5rem;
+    .hero-content h1 {
+        font-size: 2.2rem;
     }
-    #our-story .col-md-6 {
-        order: initial !important;
+    .hero-content p {
+        font-size: 1rem;
     }
-    .icon-text-block {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .tropical-icon {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-    .team-photo {
-        width: 150px; /* Adjust for smaller screens */
-        height: 150px;
-    }
-    .team-member-card h3 {
-        font-size: 1.7rem;
-    }
-}
 
-@media (max-width: 576px) {
-    #about-hero .hero-content h1 {
+    section {
+        padding: 40px 0;
+    }
+
+    h2 {
         font-size: 2rem;
+        margin-bottom: 30px;
     }
-    .team-member-card {
+
+    .lesson-card {
         padding: 20px;
+        margin-bottom: 30px;
     }
-    .team-photo {
+
+    .image-wrapper img {
+        width: 100%;
+        height: auto;
+    }
+
+    .icon-text-block h3 {
+        font-size: 1.4rem;
+    }
+    .icon-text-block .tropical-icon {
+        font-size: 2rem;
+        margin-right: 15px;
+    }
+    .icon-text-block p {
+        font-size: 1rem;
+    }
+
+    .team-member-card .team-photo {
         width: 120px;
         height: 120px;
     }
     .team-member-card h3 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
     .team-member-card .role {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
     .team-member-card .bio {
         font-size: 0.9rem;
+    }
+
+    .tropical-button {
+        padding: 10px 20px;
+        font-size: 1rem;
     }
 }

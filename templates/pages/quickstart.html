@@ -10,11 +10,10 @@
 {% block content %}
 
 <main>
-    {# --- Hero Section --- #}
-    <section class="hero-background quickstart-hero"> {# Added quickstart-hero for specific styling #}
+    <section class="hero-background quickstart-hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">Your Quick Start to Efoiling in Paradise!</h1> {# Changed to h1 for impact #}
+            <h1 class="hero-title">Your Quick Start to eFoiling in Paradise!</h1>
             <p class="hero-subtitle">
                 Glide above crystal-clear waters and experience the thrill of flight.
             </p>
@@ -24,113 +23,108 @@
         </div>
     </section>
 
-    {# --- Introduction Section (Breaking the Card Pattern) --- #}
-    <section class="quickstart-intro-section">
-        <div class="container text-center">
-            <h2>Welcome to Your Efoil Journey!</h2>
-            <p class="lead-text">
-                Embark on an unforgettable adventure with ADV eFoils. This guide is your first step towards mastering the art of electric hydrofoiling, making your tropical dreams a reality.
-            </p>
-        </div>
-    </section>
+    
 
-
-    {# --- What is Efoiling? --- #}
-    <section id="what-is-efoiling" class="quickstart-section light-bg"> {# Added quickstart-section and light-bg #}
+    <section id="what-is-efoiling" class="quickstart-section">
         <div class="container">
-            <h2>What is Efoiling?</h2>
-            <div class="content-grid-reverse"> {# New class for image-text order #}
-                <div class="content-text-block">
-                    <p>
-                        Efoiling is the exhilarating sport of riding an electric hydrofoil board over water.
-                        Imagine effortlessly gliding above the shimmering surface of a tropical lagoon!
-                    </p>
-                    <p>
-                        It's powered by a silent electric motor and a hydrofoil wing that lifts you, creating
-                        the unique sensation of flying. Controlled by a handheld remote, it's an eco-friendly
-                        adventure perfect for serene tropical waters, no waves required.
-                    </p>
-                </div>
-                <div class="section-image-wrapper framed-image"> {# Added framed-image #}
-                    <img src="{% static 'img/efoil_10.webp' %}" alt="Efoiling in clear tropical water">
+            <h2>What is eFoiling?</h2>
+            <div class="lesson-card">
+                <div class="content-grid-reverse">
+                    <div class="content-text-block">
+                        <p>
+                            eFoiling is the exhilarating sport of riding an electric hydrofoil board over water.
+                            Imagine effortlessly gliding above the shimmering surface of a tropical lagoon!
+                        </p>
+                        <p>
+                            It's powered by a silent electric motor and a hydrofoil wing that lifts you, creating
+                            the unique sensation of flying. Controlled by a handheld remote, it's an eco-friendly
+                            adventure perfect for serene tropical waters, no waves required.
+                        </p>
+                    </div>
+                    <div class="section-image-wrapper framed-image">
+                        <img src="{% static 'img/efoil_10.webp' %}" alt="Efoiling in clear tropical water">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    {# --- Efoiling Safety Tips --- #}
-    <section id="safety-tips" class="quickstart-section dark-bg"> {# Added quickstart-section and dark-bg #}
+    <section id="safety-tips" class="quickstart-section">
         <div class="container">
-            <h2>Efoiling Safety Tips</h2>
-            <p class="text-center section-description">
-                Your safety is our top priority for a worry-free tropical adventure. Always adhere to these guidelines:
-            </p>
-            <div class="content-grid">
-                <div class="section-image-wrapper framed-image"> {# Added framed-image #}
-                    <img src="{% static 'img/efoil_9.webp' %}" alt="Person wearing safety gear on a tropical beach">
-                </div>
-                <div class="content-text-block">
-                    <ul class="bullet-list checklist-icon"> {# Added checklist-icon #}
-                        <li><strong>Wear a Helmet:</strong> Essential for head protection.</li>
-                        <li><strong>Wear an Impact Vest/PFD:</strong> Provides buoyancy and protects your torso.</li>
-                        <li><strong>Leash Attachment:</strong> Always use the board leash to stay connected.</li>
-                        <li><strong>Know Your Surroundings:</strong> Be aware of other water users, obstacles, and depth.</li>
-                        <li><strong>Check Equipment:</strong> Before each ride, inspect your board, foil, and battery.</li>
-                        <li><strong>Start Slow:</strong> Master prone riding before attempting to stand up.</li>
-                        <li><strong>Learn from an Instructor:</strong> Professional guidance is highly recommended for beginners.</li>
-                        <li><strong>Respect the Water:</strong> Be mindful of weather conditions and local regulations.</li>
-                    </ul>
+            <h2>eFoiling Safety Tips</h2>
+            <div class="lesson-card">
+                <p class="text-center section-description">
+                    Your safety is our top priority for a worry-free tropical adventure. Always adhere to these guidelines:
+                </p>
+                <div class="content-grid">
+                    <div class="section-image-wrapper framed-image">
+                        <img src="{% static 'img/efoil_9.webp' %}" alt="Person wearing safety gear on a tropical beach">
+                    </div>
+                    <div class="content-text-block">
+                        <ul class="bullet-list checklist-icon">
+                            <li><strong>Wear a Helmet:</strong> Essential for head protection.</li>
+                            <li><strong>Wear an Impact Vest/PFD:</strong> Provides buoyancy and protects your torso.</li>
+                            <li><strong>Leash Attachment:</strong> Always use the board leash to stay connected.</li>
+                            <li><strong>Know Your Surroundings:</strong> Be aware of other water users, obstacles, and depth.</li>
+                            <li><strong>Check Equipment:</strong> Before each ride, inspect your board, foil, and battery.</li>
+                            <li><strong>Start Slow:</strong> Master prone riding before attempting to stand up.</li>
+                            <li><strong>Learn from an Instructor:</strong> Professional guidance is highly recommended for beginners.</li>
+                            <li><strong>Respect the Water:</strong> Be mindful of weather conditions and local regulations.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    {# --- Beginner Efoiling Steps --- #}
-    <section id="beginner-steps" class="quickstart-section light-bg"> {# Added quickstart-section and light-bg #}
+    <section id="beginner-steps" class="quickstart-section">
         <div class="container">
-            <h2>Beginner Efoiling Steps</h2>
-            <p class="text-center section-description" >
-                Follow these foundational steps to get comfortable and start flying effortlessly across the tropical waters:
-            </p>
-            <ol class="numbered-list icon-numbers"> {# Added icon-numbers #}
-                <li>
-                    <h4>Safety Briefing & Equipment Familiarization</h4>
-                    <p>Before launching into the blue, your instructor will guide you through all safety protocols and how to master your efoil's controls.</p>
-                </li>
-                <li>
-                    <h4>Prone Riding (Lying Down)</h4>
-                    <p>Begin by lying on your stomach, getting a feel for the board's balance and the remote's speed control. It's your first taste of the glide!</p>
-                </li>
-                <li>
-                    <h4>Kneeling to Standing Transition</h4>
-                    <p>Once you're comfortable prone, practice kneeling, then gradually push up to a standing position. Keep those knees soft and weight centered for smooth transitions.</p>
-                </li>
-                <li>
-                    <h4>Controlling the Foil (Lift-off)</h4>
-                    <p>As you build speed, a gentle shift of weight back will lift you above the water. Small, precise movements are your secret to sustained, magical flight.</p>
-                </li>
-                <li>
-                    <h4>Gentle Turns & Speed Management</h4>
-                    <p>Mastering turns comes with subtle weight shifts. Learn to smoothly adjust your speed, carving through the water with grace.</p>
-                </li>
-                <li>
-                    <h4>Sustained Flight & Practice</h4>
-                    <p>The more you practice, the more natural efoiling becomes. Enjoy the unparalleled sensation of flying, surrounded by the beauty of paradise.</p>
-                </li>
-            </ol>
+            <h2>Beginner eFoiling Steps</h2>
+            <div class="lesson-card">
+                <p class="text-center section-description" >
+                    Follow these foundational steps to get comfortable and start flying effortlessly across the tropical waters:
+                </p>
+                <ol class="numbered-list icon-numbers">
+                    <li>
+                        <h4>Safety Briefing & Equipment Familiarization</h4>
+                        <p>Before launching into the blue, your instructor will guide you through all safety protocols and how to master your efoil's controls.</p>
+                    </li>
+                    <li>
+                        <h4>Prone Riding (Lying Down)</h4>
+                        <p>Begin by lying on your stomach, getting a feel for the board's balance and the remote's speed control. It's your first taste of the glide!</p>
+                    </li>
+                    <li>
+                        <h4>Kneeling to Standing Transition</h4>
+                        <p>Once you're comfortable prone, practice kneeling, then gradually push up to a standing position. Keep those knees soft and weight centered for smooth transitions.</p>
+                    </li>
+                    <li>
+                        <h4>Controlling the Foil (Lift-off)</h4>
+                        <p>As you build speed, a gentle shift of weight back will lift you above the water. Small, precise movements are your secret to sustained, magical flight.</p>
+                    </li>
+                    <li>
+                        <h4>Gentle Turns & Speed Management</h4>
+                        <p>Mastering turns comes with subtle weight shifts. Learn to smoothly adjust your speed, carving through the water with grace.</p>
+                    </li>
+                    <li>
+                        <h4>Sustained Flight & Practice</h4>
+                        <p>The more you practice, the more natural efoiling becomes. Enjoy the unparalleled sensation of flying, surrounded by the beauty of paradise.</p>
+                    </li>
+                </ol>
+            </div>
         </div>
     </section>
 
-    {# --- Call to Action for Lessons --- #}
-    <section class="quickstart-cta dark-bg"> {# New section for CTA #}
+    <section class="quickstart-section">
         <div class="container text-center">
             <h2>Ready for Your First Flight in Paradise?</h2>
-            <p class="section-description">
-                While this guide gets you started, nothing compares to hands-on instruction in our tropical setting. Book a lesson with our certified experts for a safe, unforgettable efoil adventure!
-            </p>
-            <a href="{% url 'note_list' %}" class="tropical-button large-button"> {# Added large-button #}
-                Book an Efoil Lesson Today!
-            </a>
+            <div class="lesson-card">
+                <p class="section-description">
+                    While this guide gets you started, nothing compares to hands-on instruction in our tropical setting. Book a lesson with our certified experts for a safe, unforgettable efoil adventure!
+                </p>
+                <a href="{% url 'home' %}" class="tropical-button large-button">
+                    Book an eFoil Lesson Today!
+                </a>
+            </div>
         </div>
     </section>
 </main>

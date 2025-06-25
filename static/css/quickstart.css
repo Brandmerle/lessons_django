@@ -1,14 +1,8 @@
-/*
- * This stylesheet contains ALL styles necessary for the Quick Start Guide page.
- * It does NOT rely on a global 'app.css' file for any styling definitions.
- */
-
-/* --- Global / Base Styles (Typically in app.css, now included here) --- */
 body {
     font-family: 'Open Sans', sans-serif;
     color: #333;
     line-height: 1.6;
-    background-color:rgb(243, 234, 217);
+    background-color: rgb(243, 234, 217);
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
@@ -17,7 +11,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
-    color: #007bff; /* Primary blue */
+    color: #007bff;
     font-weight: 700;
     margin-top: 0;
     margin-bottom: 20px;
@@ -29,6 +23,10 @@ h2 {
     position: relative;
     text-align: center;
     margin-bottom: 40px;
+    margin-top: 60px;
+}
+h2:first-of-type {
+    margin-top: 0;
 }
 h2::after {
     content: '';
@@ -38,7 +36,7 @@ h2::after {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background-color: #20B2AA; /* Accent teal */
+    background-color: #20B2AA;
     border-radius: 2px;
 }
 h3 { font-size: 1.8rem; }
@@ -56,10 +54,9 @@ a {
     transition: color 0.3s ease;
 }
 a:hover {
-    color: #0056b3; /* Darker blue on hover */
+    color: #0056b3;
 }
 
-/* Layout Helpers */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -70,63 +67,15 @@ a:hover {
     text-align: center;
 }
 
-/* Section Base Styling */
 section {
     padding: 60px 0;
     background-color: rgb(243, 234, 217);
 }
 
-/* Card Styling (Common to all section-cards) */
-.section-card {
-    background-color: #ffffff;
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.section-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-
-/* --- Tropical Button Base Styling (Enhanced) --- */
-.tropical-button {
-    display: inline-block;
-    background: linear-gradient(to right, #00c0ff, #20B2AA); /* Tropical gradient colors */
-    color: white;
-    padding: 15px 30px; /* Slightly more generous padding for a standard button */
-    border-radius: 35px; /* More rounded */
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif; /* Ensuring Poppins font is applied */
-    font-weight: 600;
-    font-size: 1.15rem; /* Slightly larger font size for prominence */
-    line-height: 1; /* Ensure text sits correctly */
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 6px 20px rgba(0, 190, 255, 0.4); /* Stronger, matching shadow */
-    transition: all 0.3s ease-in-out; /* Smoother transition */
-    text-align: center;
-    white-space: nowrap; /* Prevent text wrapping on small buttons */
-}
-
-.tropical-button:hover {
-    transform: translateY(-4px); /* More pronounced lift */
-    box-shadow: 0 10px 30px rgba(0, 190, 255, 0.6); /* Even stronger shadow on hover */
-    opacity: 1; /* Ensure full opacity */
-}
-
-.tropical-button:active {
-    transform: translateY(-1px); /* Slight press effect */
-    box-shadow: 0 3px 10px rgba(0, 190, 255, 0.3); /* Reduced shadow on click */
-}
-
-
-/* --- Hero Section Base Styles --- */
 .hero-background {
     position: relative;
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,7 +84,11 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('../img/efoil_11.png'); /* Placeholder/default hero image path */
+    margin-bottom: 0;
+}
+
+.quickstart-hero {
+    background-image: url('../img/efoil_11.png');
 }
 
 .hero-overlay {
@@ -151,391 +104,376 @@ section {
 .hero-content {
     position: relative;
     z-index: 2;
-    padding: 0 20px;
-    max-width: 800px;
-}
-
-.hero-content h2 {
-    font-family: 'Pacifico', cursive;
-    font-size: 3.5rem;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.hero-content p {
-    font-size: 1.25rem;
-    line-height: 1.5;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-    margin-bottom: 30px;
-}
-
-
-/* --- Quick Start Page Specific Styles --- */
-
-/* Hero Section Overrides */
-.quickstart-hero {
-    background: url('../img/quickstart_hero.jpeg') no-repeat center center/cover;
-    height: 80vh; /* Make it a bit taller for more impact */
-}
-
-.quickstart-hero .hero-content h1.hero-title {
-    font-family: 'Pacifico', cursive;
-    font-size: 4rem;
-    margin-bottom: 25px;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-    color: white;
-}
-
-.quickstart-hero .hero-content p.hero-subtitle {
-    font-size: 1.5rem;
-    line-height: 1.5;
-    margin-bottom: 40px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-}
-
-.quickstart-hero .tropical-button.hero-button {
-    padding: 18px 35px; /* Larger padding for the hero button */
-    font-size: 1.3rem;
-}
-
-/* --- Introduction Section --- */
-.quickstart-intro-section {
-    padding: 80px 0;
-    background-color: #f8f9fa;
-}
-
-.quickstart-intro-section h2 {
-    margin-bottom: 30px;
-}
-
-.quickstart-intro-section .lead-text {
-    font-size: 1.25rem;
-    line-height: 1.8;
+    padding: 20px;
     max-width: 900px;
-    margin: 0 auto 0 auto;
-    color: #333;
 }
 
-/* --- General Quick Start Section Styling --- */
-.quickstart-section {
-    padding: 80px 0;
-}
-
-.quickstart-section.light-bg {
-    background-color: #f8f9fa;
-}
-
-.quickstart-section.dark-bg {
-    background-color: #f0f8ff;
-}
-
-.quickstart-section h2 {
-    margin-bottom: 40px;
-}
-
-.quickstart-section .section-description {
-    font-size: 1.15rem;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto 40px auto;
-    line-height: 1.7;
-    text-align: center;
-}
-
-/* --- Content Grid for Text and Image Layout --- */
-.content-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-.content-grid-reverse {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-.content-grid-reverse .content-text-block {
-    order: 2;
-}
-
-.content-grid-reverse .section-image-wrapper {
-    order: 1;
-}
-
-.content-text-block p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #333;
-    margin-bottom: 18px;
-}
-
-.section-image-wrapper {
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-}
-
-.section-image-wrapper.framed-image {
-    border: 5px solid white;
-    outline: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
-}
-
-.section-image-wrapper img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.4s ease;
-}
-
-.section-image-wrapper img:hover {
-    transform: scale(1.05);
-}
-
-/* --- Safety Tips Bullet List --- */
-.bullet-list.checklist-icon {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
+.hero-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 4.5rem;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
     margin-bottom: 20px;
 }
 
-.bullet-list.checklist-icon li {
+.hero-subtitle {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: wheat;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+}
+
+.tropical-button {
+    display: inline-block;
+    background: linear-gradient(to right, #00c0ff, #20B2AA);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    line-height: 1;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 190, 255, 0.4);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.tropical-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 190, 255, 0.6);
+    opacity: 1;
+}
+
+.tropical-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 190, 255, 0.3);
+}
+
+.tropical-button.inverted-button {
+    background: none;
+    background-color: #fff;
+    color: #007bff;
+    border: 2px solid #007bff;
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2);
+}
+
+.tropical-button.inverted-button:hover {
+    background-color: #e2f2ff;
+    color: #0056b3;
+    border-color: #0056b3;
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.4);
+}
+
+.tropical-button.large-button {
+    padding: 18px 35px;
+    font-size: 1.25rem;
+}
+
+.quickstart-section {
+    padding: 80px 0;
+    background-color: rgb(243, 234, 217);
+}
+
+.lesson-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto 60px auto;
+    max-width: 900px;
+}
+
+.lesson-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.lesson-card h2,
+.lesson-card h3,
+.lesson-card h4 {
+    font-family: 'Poppins', sans-serif;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.lesson-card h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #20B2AA;
+    border-radius: 2px;
+}
+
+.lesson-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.lead-text {
+    font-size: 1.25rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+.section-description {
     font-size: 1.1rem;
-    line-height: 1.8;
-    color: #333;
-    margin-bottom: 12px;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-grid, .content-grid-reverse {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    text-align: left;
+}
+
+.content-grid-reverse {
+    grid-template-areas: "text image";
+}
+.content-grid-reverse .content-text-block {
+    grid-area: text;
+}
+.content-grid-reverse .section-image-wrapper {
+    grid-area: image;
+}
+
+.content-text-block {
+    padding: 0;
+}
+
+.section-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.section-image-wrapper img:hover {
+    transform: scale(1.02);
+}
+
+.framed-image img {
+    border: 5px solid #20B2AA;
+}
+
+.bullet-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bullet-list li {
     position: relative;
-    padding-left: 40px;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: #444;
+}
+
+.bullet-list li:last-child {
+    margin-bottom: 0;
 }
 
 .bullet-list.checklist-icon li::before {
-    content: '✅';
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
     position: absolute;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
     color: #20B2AA;
-    font-size: 1.5em;
+    font-size: 1.2rem;
+    top: 2px;
 }
 
-/* --- Beginner Steps Numbered List --- */
-.numbered-list.icon-numbers {
+.numbered-list {
     list-style: none;
     padding: 0;
-    counter-reset: step-counter;
-    margin-top: 40px;
+    margin: 0;
+    counter-reset: custom-counter;
 }
 
-.numbered-list.icon-numbers li {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.numbered-list li {
     position: relative;
-    padding-left: 80px;
+    margin-bottom: 25px;
+    padding-left: 60px;
+    text-align: left;
 }
 
-.numbered-list.icon-numbers li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+.numbered-list li:last-child {
+    margin-bottom: 0;
 }
 
 .numbered-list.icon-numbers li::before {
-    counter-increment: step-counter;
-    content: counter(step-counter);
+    counter-increment: custom-counter;
+    content: counter(custom-counter);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    left: 20px;
-    top: 30px;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(to right, #00c0ff, #20B2AA);
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
     color: white;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
     font-weight: bold;
-    box-shadow: 0 4px 12px rgba(0, 190, 255, 0.4);
-    z-index: 1;
-}
-
-.numbered-list.icon-numbers li h4 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.6rem;
-    color: #007bff;
-    margin-bottom: 8px;
-    margin-top: 0;
-}
-
-.numbered-list.icon-numbers li p {
-    font-size: 1.05rem;
-    color: #555;
-    line-height: 1.7;
-}
-
-
-/* --- Call to Action Section --- */
-.quickstart-cta {
-    padding: 80px 0;
-    background:rgb(243, 234, 217);
-    color: #007bff;
-    text-align: center;
-}
-
-.quickstart-cta h2 {
-    color: white;
-    margin-bottom: 25px;
-}
-
-.quickstart-cta h2::after {
-    background-color: white;
-}
-
-
-.quickstart-cta .section-description {
-    color: white;
-    max-width: 900px;
-    margin: 0 auto 35px auto;
     font-size: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.quickstart-cta .tropical-button.large-button {
-    padding: 20px 40px; /* Even larger CTA button */
-    font-size: 1.4rem;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+.numbered-list li h4 {
+    margin-bottom: 5px;
+    color: #007bff;
+    font-size: 1.5rem;
 }
 
-.quickstart-cta .tropical-button.large-button:hover {
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+.numbered-list li p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0;
 }
 
-
-/* --- Responsive Adjustments --- */
 @media (max-width: 992px) {
-    .quickstart-hero {
-        height: 65vh;
-    }
-    .quickstart-hero .hero-content h1.hero-title {
+    .hero-title {
         font-size: 3.5rem;
     }
-    .quickstart-hero .hero-content p.hero-subtitle {
+    .hero-subtitle {
         font-size: 1.3rem;
     }
-    .quickstart-hero .tropical-button.hero-button {
-        padding: 15px 30px;
-        font-size: 1.2rem;
+
+    .lesson-card {
+        padding: 25px;
+        margin-bottom: 40px;
     }
 
-    .quickstart-intro-section .lead-text {
-        font-size: 1.15rem;
+    h2 {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+        margin-top: 50px;
     }
 
     .content-grid, .content-grid-reverse {
         grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    .content-grid-reverse .content-text-block {
-        order: 1;
-    }
-    .content-grid-reverse .section-image-wrapper {
-        order: 2;
+        gap: 30px;
     }
 
-    .bullet-list.checklist-icon li {
-        font-size: 1rem;
-        padding-left: 35px;
-    }
-    .bullet-list.checklist-icon li::before {
-        font-size: 1.3em;
+    .content-grid-reverse {
+        grid-template-areas: "image" "text";
     }
 
-    .numbered-list.icon-numbers li {
-        padding: 25px;
-        padding-left: 70px;
+    .section-image-wrapper {
+        margin-bottom: 20px;
+    }
+
+    .numbered-list li {
+        padding-left: 50px;
+        margin-bottom: 20px;
+    }
+    .numbered-list li h4 {
+        font-size: 1.3rem;
     }
     .numbered-list.icon-numbers li::before {
-        left: 15px;
-        top: 25px;
-        width: 45px;
-        height: 45px;
-        font-size: 1.6rem;
-    }
-    .numbered-list.icon-numbers li h4 {
-        font-size: 1.4rem;
-    }
-    .numbered-list.icon-numbers li p {
+        width: 35px;
+        height: 35px;
         font-size: 1rem;
-    }
-
-    .tropical-button { /* Adjust base button size for smaller screens */
-        padding: 12px 25px;
-        font-size: 1.05rem;
     }
 }
 
 @media (max-width: 768px) {
-    .quickstart-hero {
-        height: 55vh;
+    .hero-background {
+        height: 60vh;
     }
-    .quickstart-hero .hero-content h1.hero-title {
-        font-size: 2.8rem;
+    .hero-title {
+        font-size: 2.5rem;
     }
-    .quickstart-hero .hero-content p.hero-subtitle {
+    .hero-subtitle {
         font-size: 1.1rem;
     }
 
-    .quickstart-section, .quickstart-intro-section, .quickstart-cta {
-        padding: 50px 0;
+    section {
+        padding: 40px 0;
     }
 
-    .quickstart-section h2 {
-        font-size: 2rem;
-        margin-bottom: 30px;
-    }
-    .quickstart-section .section-description {
-        font-size: 1rem;
-        margin-bottom: 30px;
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+        margin-top: 40px;
     }
 
-    .content-grid, .content-grid-reverse {
-        gap: 30px;
-    }
-
-    .numbered-list.icon-numbers li {
+    .lesson-card {
         padding: 20px;
-        padding-left: 60px;
+        margin-bottom: 30px;
+    }
+
+    .lead-text {
+        font-size: 1.1rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .tropical-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    .tropical-button.large-button {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+    }
+
+    .bullet-list li {
+        padding-left: 25px;
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+    .bullet-list.checklist-icon li::before {
+        font-size: 1rem;
+        top: 4px;
+    }
+
+    .numbered-list li {
+        padding-left: 45px;
+        margin-bottom: 15px;
+    }
+    .numbered-list li h4 {
+        font-size: 1.2rem;
     }
     .numbered-list.icon-numbers li::before {
-        width: 40px;
-        height: 40px;
-        font-size: 1.4rem;
-        left: 10px;
-        top: 20px;
-    }
-    .numbered-list.icon-numbers li h4 {
-        font-size: 1.25rem;
-    }
-
-    .quickstart-cta h2 {
-        font-size: 2.2rem;
-    }
-    .quickstart-cta .section-description {
-        font-size: 1.05rem;
-    }
-    .quickstart-cta .tropical-button.large-button {
-        padding: 15px 30px;
-        font-size: 1.2rem;
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
     }
 }

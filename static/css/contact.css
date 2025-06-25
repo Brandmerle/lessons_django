@@ -2,7 +2,7 @@
 .hero-background-contact {
     position: relative;
     height: 60vh; 
-    background: url('../img/efoil_7.jpg') no-repeat center center/cover; 
+    background: url('../img/foil23.jpeg') no-repeat center center/cover; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +20,7 @@
 
 .hero-background-contact .hero-content h2 {
     font-family: 'Poppins', sans-serif; 
-    font-size: 3rem; /* Slightly smaller than home hero h1, but adjustable */
+    font-size: 3rem; 
     margin-bottom: 15px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     color: #fff; 
@@ -55,13 +55,13 @@ h2::after {
 }
 
 
-/* --- Contact Grid Layout --- */
+
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-bottom: 50px;
-    align-items: start; /* Align cards to the top */
+    align-items: start; 
 }
 
 /* --- General Card Styling for Contact Page Sections --- */
@@ -69,27 +69,27 @@ h2::after {
     background-color: #fff;
     border-radius: 15px;
     padding: 30px;
-    box-shadow: var(--shadow-card-light); /* Using variable from app.css */
+    box-shadow: var(--shadow-card-light); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%; /* Ensures cards are same height in a row */
+    height: 100%; 
     display: flex;
     flex-direction: column;
 }
 
 .section-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-card-hover); /* Using variable from app.css */
+    box-shadow: var(--shadow-card-hover); 
 }
 
 .section-card h3 {
-    font-family: var(--font-poppins); /* Using variable from app.css */
+    font-family: var(--font-poppins); 
     font-size: 1.8rem;
-    color: #007bff; /* Using variable from app.css */
+    color: #007bff; 
     margin-bottom: 25px;
     text-align: center;
 }
 
-/* --- Contact Info Card Specifics --- */
+/* --- Contact Info Card --- */
 .contact-info-card ul {
     list-style: none;
     padding: 0;
@@ -99,46 +99,46 @@ h2::after {
 .contact-info-card ul li {
     font-size: 1.1rem;
     margin-bottom: 15px;
-    color: var(--text-medium); /* Using variable from app.css */
+    color: var(--text-medium); 
     display: flex;
     align-items: center;
 }
 
 .contact-info-card ul li strong {
     margin-right: 10px;
-    color: var(--text-dark); /* Using variable from app.css */
+    color: var(--text-dark); 
 }
 
 .contact-info-card ul li a {
-    color: var(--primary-blue); /* Using variable from app.css */
+    color: var(--primary-blue); 
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .contact-info-card ul li a:hover {
-    color: var(--accent-teal); /* Using variable from app.css */
+    color: var(--accent-teal); 
 }
 
 .contact-info-card p {
     font-size: 1rem;
-    color: var(--text-light); /* Using variable from app.css */
+    color: var(--text-light); 
     line-height: 1.6;
     margin-top: auto;
 }
 .contact-logo-wrapper {
-    text-align: center; /* Center the logo */
-    margin-top: 70px;   /* Space above the logo */
-    margin-bottom: 25px; /* Space below the logo and before the paragraph */
+    text-align: center; 
+    margin-top: 70px;   
+    margin-bottom: 25px; 
 }
 
 .contact-logo {
-    max-width: 800px; /* Adjust as needed - control the logo's size */
+    max-width: 800px; 
     height: auto;
-    display: block; /* Ensure it behaves like a block element for max-width/centering */
-    margin: 0 auto; /* Center the logo if max-width is less than parent */
+    display: block; 
+    margin: 0 auto; 
 }
 
-/* --- Contact Form Card Specifics --- */
+/* --- Contact Form Card  --- */
 .contact-form .form-group {
     margin-bottom: 20px;
 }
@@ -147,7 +147,7 @@ h2::after {
     display: block;
     font-weight: 600;
     margin-bottom: 8px;
-    color: var(--text-dark); /* Using variable from app.css */
+    color: var(--text-dark); 
 }
 
 .contact-form .form-control {
@@ -156,13 +156,13 @@ h2::after {
     border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 1rem;
-    color: var(--text-dark); /* Using variable from app.css */
+    color: var(--text-dark); 
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
     box-sizing: border-box;
 }
 
 .contact-form .form-control:focus {
-    border-color: var(--primary-blue); /* Using variable from app.css */
+    border-color: var(--primary-blue); 
     outline: none;
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
@@ -191,7 +191,7 @@ h2::after {
     transform: translateY(-3px); 
 }
 
-/* --- Map Section Specifics --- */
+/* --- Map Section --- */
 .map-section {
     text-align: center;
     padding: 40px;
@@ -201,13 +201,13 @@ h2::after {
 
 .map-section p {
     margin-bottom: 25px;
-    color: var(--text-medium); /* Using variable from app.css */
+    color: var(--text-medium); 
     font-size: 1.1rem;
 }
 
 .map-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
     border-radius: 10px;
@@ -223,7 +223,7 @@ h2::after {
     border: 0;
 }
 
-/* --- Responsive Adjustments for Contact Page --- */
+/* --- Responsive Adjustments --- */
 @media (max-width: 992px) {
     .hero-background-contact {
         height: 50vh;
@@ -238,7 +238,7 @@ h2::after {
     }
 
     .contact-grid {
-        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        grid-template-columns: 1fr; 
     }
 
     .section-card {

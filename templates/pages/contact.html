@@ -38,18 +38,15 @@
                         <img src="{% static 'img/logo2.png' %}" alt="Isla eFoils Logo" class="contact-logo">
                     </div>
                     <p>
-                        We're always ready to help you plan your perfect efoil adventure!
+                        We're always ready to help you plan your perfect eFoil adventure!
                     </p>
                 </div>
 
                 <div class="contact-form-card section-card">
                     <h3>Send Us a Message</h3>
-                    {# This is a placeholder for a Django contact form. #}
-                    {# You would typically create this form in forms.py and pass it to the template. #}
+                    
                     <form method="post" action="{% url 'contact' %}" class="contact-form">
-                        {% csrf_token %} {# Django security token #}
-
-                        {# Example form fields - replace with actual form.as_p or form.as_div #}
+                        {% csrf_token %} 
                         <div class="form-group">
                             <label for="name">Your Name:</label>
                             <input type="text" id="name" name="name" required class="form-control">
