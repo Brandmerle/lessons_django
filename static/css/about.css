@@ -291,9 +291,10 @@ section {
 
 .team-member-card .role {
     font-size: 1.1rem;
-    color: #666;
+    color: #007bff;
     margin-bottom: 15px;
     font-style: italic;
+    text-align: center;
 }
 
 .team-member-card .bio {
